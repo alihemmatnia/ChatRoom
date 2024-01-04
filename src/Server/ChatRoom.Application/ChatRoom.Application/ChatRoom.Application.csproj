@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\ChatRoom.Framework\ChatRoom.Framework.csproj" />
+    <ProjectReference Include="..\..\ChatRoom.DataLayer\ChatRoom.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
