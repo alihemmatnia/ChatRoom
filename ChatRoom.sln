@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{FAF1C8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{1095140D-03AD-4CC7-8FD5-172BD6E248D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatRoom.Api", "src\Server\ChatRoom.Api\ChatRoom.Api.csproj", "{5A6558AA-490B-4693-8D5C-78B58822D9C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatRoom.Api", "src\Server\ChatRoom.Api\ChatRoom.Api.csproj", "{5A6558AA-490B-4693-8D5C-78B58822D9C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatRoom.Infrastructure", "src\Server\ChatRoom.DataLayer\ChatRoom.Infrastructure.csproj", "{2E607063-41AA-4C5E-B36C-E47327B0FC80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatRoom.Infrastructure", "src\Server\ChatRoom.DataLayer\ChatRoom.Infrastructure.csproj", "{2E607063-41AA-4C5E-B36C-E47327B0FC80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatRoom.Framework", "src\Framework\ChatRoom.Framework\ChatRoom.Framework.csproj", "{F4A1451D-99A7-427F-8547-323770712E63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatRoom.Framework", "src\Framework\ChatRoom.Framework\ChatRoom.Framework.csproj", "{F4A1451D-99A7-427F-8547-323770712E63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatRoom.Application", "src\Server\ChatRoom.Application\ChatRoom.Application\ChatRoom.Application.csproj", "{B0366936-20EC-4D4C-8DD3-3B5E90452982}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatRoom.Application", "src\Server\ChatRoom.Application\ChatRoom.Application\ChatRoom.Application.csproj", "{B0366936-20EC-4D4C-8DD3-3B5E90452982}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

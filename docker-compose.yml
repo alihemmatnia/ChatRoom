@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  chatroom.api:
+    image: ${DOCKER_REGISTRY-}chatroomapi
+    build:
+      context: .
+      dockerfile: src/Server/ChatRoom.Api/Dockerfile
