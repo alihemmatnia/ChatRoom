@@ -1,14 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Framework\ChatRoom.Framework\ChatRoom.Framework.csproj" />
-    <ProjectReference Include="..\..\ChatRoom.DataLayer\ChatRoom.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\ChatRoom.Infrastracture\ChatRoom.Infrastracture.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.16" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
 </Project>
