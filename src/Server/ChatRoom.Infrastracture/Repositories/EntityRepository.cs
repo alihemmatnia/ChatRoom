@@ -17,11 +17,7 @@ namespace ChatRoom.Infrastracture.Repositories
 			_context = context;
 			_dbSet = context.Set<TEntity>();
 		}
-		//public virtual async Task<TEntity> GetOneAsync(Guid id, CancellationToken cancellationToken)
-		//{
-		//    return await _dbSet.FindAsync(new object[] { id }, cancellationToken);
-		//}
-
+		
 		public Task<TEntity?> GetOneAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default)
 		{
 			return _dbSet.FirstOrDefaultAsync(predicate, cancellationToken);
@@ -49,8 +45,6 @@ namespace ChatRoom.Infrastracture.Repositories
 		{
 			return await _dbSet.Where(predicate).ToListAsync(cancellationToken);
 		}
-
-
 
 		public virtual Task<bool> Exists(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default)
 		{
@@ -164,6 +158,5 @@ namespace ChatRoom.Infrastracture.Repositories
 		{
 			_context?.Dispose();
 		}
-
 	}
 }
