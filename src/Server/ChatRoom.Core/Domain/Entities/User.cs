@@ -8,7 +8,7 @@
 		public byte[] PasswordSalt { get; private set; }
 		public DateTime CreatedDate { get; private set; }
 		public DateTime LastLoginDate { get; private set; }
-
+        public string? ProfilePicture { get; private set; }
         public List<Group> Groups{ get; private set; }
 
         public User(string username)
@@ -24,6 +24,11 @@
 		{
 			PasswordHash = passwordHash;
 			PasswordSalt = passwordSalt;
+		}
+
+		public void SetProfile(string path)
+		{
+			ProfilePicture = path;
 		}
 
 		public void ChangeLastLoginTime()
