@@ -40,5 +40,18 @@ namespace ChatRoom.Application.Services
 				Success = true,
 			};
 		}
+
+		public async Task<ApiResponse<string>> Login(UserDto userDto, CancellationToken cancellationToken)
+		{
+			var user = await _userRepository.GetOneAsync(x => x.UserName == userDto.UserName);
+			if (user != null)
+				return new ApiResponse<string> { Success = false, Message = "نام کاربری یا رمزعبور اشتباه میباشد" };
+
+			var checkPassword = PasswordHash.VerifyPassword(userDto.Password, user.PasswordHash, user.PasswordSalt);
+			if (!checkPassword)
+				return new ApiResponse<string> { Success = false, Message = "نام کاربری یا رمزعبور اشتباه میباشد" };
+
+			throw new NotImplementedException();
+		}
 	}
 }

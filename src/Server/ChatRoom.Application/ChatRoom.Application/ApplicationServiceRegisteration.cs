@@ -11,10 +11,11 @@ namespace ChatRoom.Application
 {
 	public static class ApplicationServiceRegisteration
 	{
-		public static void AddApplicationService(this IServiceCollection services, IConfiguration? configuration = null)
+		public static IServiceCollection AddApplicationService(this IServiceCollection services, IConfiguration? configuration = null)
 		{
 
 			services.AddScoped<IUserApplicationService, UserApplicationService>();
+			return services;
 		}
 
 

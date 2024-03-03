@@ -10,7 +10,7 @@ namespace ChatRoom.Infrastracture
 {
 	public static class RepositoryRegisteration
 	{
-		public static void AddRepository(this IServiceCollection services,
+		public static IServiceCollection AddRepository(this IServiceCollection services,
 		   IConfiguration? configuration = null)
 		{
 
@@ -22,6 +22,8 @@ namespace ChatRoom.Infrastracture
 			{
 				op.UseSqlServer(configuration != null ? configuration.GetConnectionString("dbConn") : ChatRoomEnviroment.ReadVariable(ChatRoomEnviroment.DB_CONN));
 			});
+
+			return services;
 		}
 	}
 }
