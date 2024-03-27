@@ -50,7 +50,7 @@ namespace ChatRoom.Application.Services
 			var checkPassword = PasswordHash.VerifyPassword(userDto.Password, user.PasswordHash, user.PasswordSalt);
 			if (!checkPassword)
 				return new ApiResponse<string> { Success = false, Message = "نام کاربری یا رمزعبور اشتباه میباشد" };
-
+			// TODO: generate token
 			throw new NotImplementedException();
 		}
 	}
